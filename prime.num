@@ -1,0 +1,30 @@
+#prints all prime numbers from 1 to the input
+prime <- function(x) {
+  vec <- c()
+  for(i in 1:x) {
+    count <- 0
+    for(j in 1:i) {
+      if(i %% j == 0) {
+        count <- count + 1
+      }
+    }
+    if(count == 2) {
+      vec <- append(vec, i)
+    }
+  }
+  print(vec)
+}
+
+#is a specific number prime
+prime1 <- function(x) {
+    count <- 0
+    for(i in 1:x) {
+      if(x %% i == 0) {
+        count <- count + 1
+      }
+    }
+    if(count == 2) {
+      print("This is a prime number.")
+    }
+      else print("Nope.")
+}
